@@ -1,0 +1,12 @@
+#/bin/bash
+# Obtiene ID del Touchpad y lo mete en una variable
+TouchPad=$(xinput list|grep GlidePoint|awk '{print substr($6,4)}')
+Estado=$(xinput --list-props $TouchPad |grep Enabled|awk '{print $4}')
+echo Estado: $Estado
+if [ "$Estado"  = "0" ]; then
+  xinput --enable $TouchPad
+  echo TouchPad con ID $TouchPad activado.
+else
+  xinput --disable $TouchPad
+  echo TouchPad con ID $TouchPad desactivado.
+fi
