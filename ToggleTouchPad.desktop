@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=Toggle TouchPad
+GenericName=Toggle TouchPad
+#Icon=display
+Icon=/usr/share/icons/gnome/48x48/devices/input-touchpad.png
+Exec=/home/jrb/ToggleTouchPad
+Terminal=false
+Type=Application
+Categories=Settings;HardwareSettings;
+StartupNotify=false
